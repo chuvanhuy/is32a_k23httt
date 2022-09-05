@@ -1,0 +1,52 @@
+body {
+	background-color: lightpink;
+}
+
+p {
+	color: red;
+	font-size: 14pt;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: Arial;
+}
+
+ul li, ol li {
+	font-size: 14pt;
+	font-family: Arial;
+}
+
+ul li {
+	list-style-type: square;
+}
+
+#phong_cach_thong_bao {
+	color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.phong_cach_tieu_de {
+	font-style: italic;
+	color: blue;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #959595;
+}
+
+a:visited {
+	color: #959595;
+}
+
+a:hover {
+	color: #9F224E;
+}
+
+a:active {
+	color: #9F224E;
+}
