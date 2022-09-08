@@ -1,0 +1,1 @@
+window.alert("Test thử tính năng nạp câu lệnh JavaScript bằng cách sử dụng File");
