@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="./js/k23httt.js"></script>
 </head>
 <body>
-	<h2><a href="./trang_chu.html">Trang chủ</a> | <a href="./gioi_thieu.html">Giới thiệu</a> | <a href="./tin_tuc.html">Tin tức</a> | <a href="./san_pham.html">Sản phẩm</a> | <a href="./lien_he.html">Liên hệ</a></h2>
+	<?php require('menu.php');?>
 
 	<br>
 

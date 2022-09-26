@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-	<h2><a href="./trang_chu.html">Trang chủ</a> | <a href="./gioi_thieu.html">Giới thiệu</a> | <a href="./tin_tuc.html">Tin tức</a> | <a href="./san_pham.html">Sản phẩm</a> | <a href="./lien_he.html">Liên hệ</a></h2>
+	<?php require('menu.php');?>
 	
 	<h2>Trang tin tức</h2>
 </body>
