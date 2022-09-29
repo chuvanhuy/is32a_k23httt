@@ -16,6 +16,48 @@
 <body>
 	<?php require('menu.php');?>
 
+	<?php 
+		$trieu_tap="Triệu tập sinh viên K23HTTTQL tham dự sự kiện cuộc thi từ 18:00 tối nay 29/09/2022 tại Hội trường lớn";
+		echo $trieu_tap;
+		// print_r($trieu_tap);
+		// var_dump($trieu_tap); exit();
+		// echo phpinfo();
+
+		$a="Hài lòng";
+		$b="Bình thường";
+		$c="Không hài lòng";
+
+		$str="";
+		$j=0;
+		if ($j==0) {
+			$str=$str.$a;
+			$j=1;
+		} else {
+			$str=$str.", ".$b;
+		}
+		if ($j==0) {
+			$str=$str.$a;
+			$j=1;
+		} else {
+			$str=$str.", ".$b;
+		}
+		if ($j==0) {
+			$str=$str.$a;
+			$j=1;
+		} else {
+			$str=$str.", ".$c;
+		}
+		echo $str;
+
+		$i=1;
+		if (isset($i)) {
+			echo "Biến $i đã được gán giá trị";
+		} else {
+			echo "Biến $i chưa được gán giá trị";
+		}
+
+	;?>
+
 	<br>
 
 	<h3 style="text-align: center; text-transform: uppercase; color: red;">Giá xăng giữ nguyên, dầu tăng</h3>

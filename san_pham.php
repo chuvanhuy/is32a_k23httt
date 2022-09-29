@@ -11,25 +11,27 @@
 	
 	<h2>Trang sản phẩm</h2>
 
-	<div id="NoiDungBoSung">...</div>
+	<?php 
+		// Kết nối đến CSDL
+		require('config.php');
 
-	<script type="text/javascript">
-		// Dòng mã lệnh in dữ liệu ra màn hình
-		document.write("THỬ NGHIỆM VUI VẺ");
+		// Truy vấn đến bảng dữ liệu
+		$sql="SELECT * FROM tbl_san_pham ORDER BY sp_id DESC";
 
-		// Dòng mã lệnh in dữ liệu theo kiểu ẩn (hiển thị ở TAB console)
-		console.log("Muốn làm GAME để chinh phục bạn gái");
+		// Thực hiện truy vấn đến bảng dữ liệu
+		$san_pham=mysqli_query($con, $sql);
 
-		// Dòng mã lệnh để khai báo biến a & biến ty_gia
-		var a=1000;
-		var ty_gia=60000;
-
-		// Dòng mã lệnh in dữ liệu theo kiểu ẩn (hiển thị ở TAB console)
-		console.log("Chúng ta đang có số PI = "+a);
-		console.log("Quy tiền VNĐ = "+a*ty_gia);
-	</script>
-
-	<button onclick="document.getElementById('NoiDungBoSung').innerHTML='TỚ THÍCH CẬU'">TEST THỬ</button>
+		// In kết quả truy vấn ra màn hình
+		$i=1;
+		while ($row = mysqli_fetch_array($san_pham)) {
+			echo $i.". ".$row["sp_ten_san_pham"]."<br>"; 
+			echo "Mô tả: ".$row["sp_mo_ta"]."<br>"; 
+			echo "Số lượt xem: ".$row["sp_luot_xem"]."<br>"; 
+			echo "Ngày tạo: ".$row["sp_created"]."<br>"; 
+			echo "<hr>";
+			$i++;
+		}
+	;?>
 
 </body>
 </html>
