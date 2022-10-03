@@ -18,7 +18,7 @@
 		// Thực hiện truy vấn đến bảng dữ liệu
 		$tin_tuc=mysqli_query($con, $sql);
 	;?>
-	<p style="text-align: right;"><a href="../admin/them_moi_tin_tuc.html"><img src="../img/add.png" style="width: 30px; height: auto;"></a></p>
+	<p style="text-align: right;"><a href="../admin/them_moi_tin_tuc.php"><img src="../img/add.png" style="width: 30px; height: auto;"></a></p>
 	<table>
 		<tr>
 			<td style="width: 50px; text-align: center; font-weight: bold;">STT</td>
@@ -37,8 +37,8 @@
 			<td style="text-align: center;"><?php echo $i;?></td>
 			<td><?php echo $row["tt_tieu_de"];?></td>
 			<td style="text-align: center;"><?php echo $row["tt_created"];?></td>
-			<td style="text-align: center;"><a href="../admin/sua_tin_tuc.html"><img src="../img/edit.png" style="width: 30px; height: auto;"></a></td>
-			<td style="text-align: center;"><a href="../admin/xoa_tin_tuc.html"><img src="../img/delete.png" style="width: 30px; height: auto;"></a></td>
+			<td style="text-align: center;"><a href="../admin/sua_tin_tuc.php?id=<?php echo $row["tt_id"];?>"><img src="../img/edit.png" style="width: 30px; height: auto;"></a></td>
+			<td style="text-align: center;"><a href="../admin/xoa_tin_tuc.php?id=<?php echo $row["tt_id"];?>"><img src="../img/delete.png" style="width: 30px; height: auto;"></a></td>
 		</tr>
 		<?php 
 		}
