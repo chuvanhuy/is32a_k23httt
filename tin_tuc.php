@@ -24,7 +24,8 @@
 		// In kết quả truy vấn ra màn hình
 		$i=1;
 		while ($row = mysqli_fetch_array($tin_tuc)) {
-			echo $i.". ".$row["tt_tieu_de"]."<br>"; 
+			echo $i.". ".$row["tt_tieu_de"]."<br>";  
+			echo "<img src='./img/".$row["tt_anh_minh_hoa"]."'><br>"; 
 			echo "Mô tả: ".$row["tt_mo_ta"]."<br>"; 
 			echo "Số người đọc: ".$row["tt_so_luot_doc"]."<br>"; 
 			echo "Ngày tạo: ".$row["tt_created"]."<br>"; 

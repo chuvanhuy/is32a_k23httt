@@ -25,6 +25,7 @@
 		$i=1;
 		while ($row = mysqli_fetch_array($san_pham)) {
 			echo $i.". ".$row["sp_ten_san_pham"]."<br>"; 
+			echo "<img src='./img/".$row["sp_anh_minh_hoa"]."'><br>"; 
 			echo "Mô tả: ".$row["sp_mo_ta"]."<br>"; 
 			echo "Số lượt xem: ".$row["sp_luot_xem"]."<br>"; 
 			echo "Ngày tạo: ".$row["sp_created"]."<br>"; 
