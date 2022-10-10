@@ -20,9 +20,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Quản trị liên hệ</title>
+	<title>Quản trị hệ thống</title>
 </head>
 <body>
-
+	<ul>
+		<li><a href="../admin/quan_tri_tin_tuc.php">Quản trị tin tức</a></li>
+		<li><a href="../admin/quan_tri_san_pham.php">Quản trị sản phẩm</a></li>
+		<li><a href="../admin/quan_tri_tai_khoan.php">Quản trị tài khoản</a></li>
+		<li><a href="../admin/quan_tri_lien_he.php">Quản trị liên hệ</a></li>
+	</ul>
 </body>
 </html>

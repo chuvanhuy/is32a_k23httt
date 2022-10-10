@@ -1,26 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kiểm tra đăng nhập</title>
+<?php
+	// Lấy các dữ liệu được chuyển sang
+	$username=$_POST['txtUserName'];
+	$password=md5($_POST['txtPassword']);
+
+	// Kiểm tra xem Username & Password có khớp với thông tin lưu trong CSDL hay không?
+	$sql="
+		SELECT *
+		FROM tbl_tai_khoan
+		WHERE tk_ten_tai_khoan='".$username."' AND tk_mat_khau='".$password."'
+	";
+	// echo $sql; exit();
+
+	
+	// Kết nối đến CSDL
+	require('../config.php');
+
+	// Truy vấn đến bảng dữ liệu
+	$tai_khoan = mysqli_query($con, $sql)->num_rows;
+
+	if ($tai_khoan==1) {
+		session_start();
+		$_SESSION['da_dang_nhap']=1;
+;?>
 	<script type="text/javascript">
-		// Khai báo một mảng
-		var xe_hoi = ["BMW", "Toyota", "Mazda", "Vinfast", "Kia"];
-
-		// Lấy ra 1 phần tử mong muốn trong mảng (cụ thể xe Vinfast)
-		window.alert(xe_hoi[3]);
-
-		// Khai báo một đối tượng xe hơi; có các thuộc tính màu sắc, cân nặng, hãng xe, dòng xe, giá bán
-		var xe = {hang_xe:"Toyota", dong_xe:"Vios 2022 G", gia_ban:"620.000.000 VND", mau_sac:"Trắng Ngọc Trai", can_nang:"950 Kg"};
-
-		// Truy cập tới 1 thuộc tính nào đó (Dòng xe + Màu Sắc) trong đối tượng "xe"
-		window.alert("Xe của bạn là: "+xe.hang_xe+" màu "+xe.mau_sac);
+		window.alert("Bạn đã đăng nhập thành công!");
+		window.location.href = "../admin/quan_tri_he_thong.php";
 	</script>
-</head>
-<body>
-	<h1>Ở ĐÂY, TÔI SẼ CHECK XEM USERNAME & PASSWORD CỦA BẠN NHẬP CÓ CHÍNH XÁC KHÔNG?</h1>
-	<h1>- NẾU CHÍNH XÁC --> CHO TRUY CẬP TRANG QUẢN TRỊ</h1>
-	<h1>- NẾU KHÔNG CHÍNH XÁC --> QUAY VỀ TRANG ĐĂNG NHẬP</h1>
-</body>
-</html>
+<?php
+	} else {
+;?>
+	<script type="text/javascript">
+		window.alert("Bạn chưa nhập đúng thông tin! Vui lòng nhập lại!");
+		window.location.href = "../admin/dang_nhap.php";
+	</script>
+<?php
+	}
+;?>

@@ -29,7 +29,7 @@
 <body>
 	<h1>ĐĂNG NHẬP HỆ THỐNG</h1>
 	
-	<form action="../admin/kiem_tra_dang_nhap.html" method="POST" onsubmit="return check_du_lieu()">
+	<form action="../admin/kiem_tra_dang_nhap.php" method="POST" onsubmit="return check_du_lieu()">
 	<table>
 		<tr>
 			<td style="width: 130px;">Tên đăng nhập</td>
